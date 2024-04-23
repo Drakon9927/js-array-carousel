@@ -6,3 +6,4 @@ Rendo le slide un arrey
 tramite querySelector individuo "active"
 creo slides e il codice per passare da una slide all'altra, prima per levare active, poi per reinserirlo
 Creo un eventlistener e incollo il codice (per il bottone)
+Ricopio il codice e apporto modifiche per il bottone previous
