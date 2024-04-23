@@ -1,0 +1,24 @@
+.imgcontainer{
+    width: 30rem;
+    height: 20rem;
+}
+
+.imgcontainer>img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.d-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slides{
+    display: none;
+}
+
+.active{
+    display: block;
+}
