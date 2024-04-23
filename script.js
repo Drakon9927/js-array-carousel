@@ -8,6 +8,8 @@ let slides = document.getElementsByClassName("slide");
 let immagineAttiva;
 let prossimaSlide;
 
+
+
 for (let i = 0; i < slides.length; i++) {
 
     const slide = slides[i];
@@ -26,13 +28,13 @@ for (let i = 0; i < slides.length; i++) {
 
 // Slide attuale ma + 1 
 
-prossimaslide = immagineAttiva + 1;
+prossimaSlide = immagineAttiva + 1;
 
 // Reset alla fine delle slide
 if( prossimaSlide >= slides.length ) {
     prossimaSlide = 0;
 }
 
-slides[prossimaSlide]
+slides[prossimaSlide].classList.add("active");
 
 console.log("L'immagine attiva era: ", immagineAttiva);
