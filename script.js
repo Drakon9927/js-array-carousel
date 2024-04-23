@@ -8,8 +8,8 @@ let slides = document.getElementsByClassName("slide");
 let immagineAttiva;
 let prossimaSlide;
 
-
-
+document.getElementById("btnNext").addEventListener("click", function(){
+// Tutto il codice per il bottone
 for (let i = 0; i < slides.length; i++) {
 
     const slide = slides[i];
@@ -38,3 +38,6 @@ if( prossimaSlide >= slides.length ) {
 slides[prossimaSlide].classList.add("active");
 
 console.log("L'immagine attiva era: ", immagineAttiva);
+
+})
+
