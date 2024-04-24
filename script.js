@@ -4,8 +4,9 @@ document.querySelector("active");
 
 // Tutte le slides in un array
 let slides = document.getElementsByClassName("slide");
+let containers = document.querySelectorAll('.imgcontainer');
 
-let immagineAttiva;
+let immagineAttiva = 0;
 let prossimaSlide;
 
 document.getElementById("btnNext").addEventListener("click", function(){
@@ -18,6 +19,7 @@ for (let i = 0; i < slides.length; i++) {
     if( slide.classList.contains("active")) {
         // se ce l'ha, rimuovo active
         slide.classList.remove("active");
+        containers[i].classList.remove("active");
 
         immagineAttiva = i;
         console.log("Active rimosso",i)
@@ -36,6 +38,7 @@ if( prossimaSlide >= slides.length ) {
 }
 
 slides[prossimaSlide].classList.add("active");
+containers[immagineAttiva].classList.add("active");
 
 console.log("L'immagine attiva era: ", immagineAttiva);
 
@@ -53,6 +56,7 @@ document.getElementById("btnPrev").addEventListener("click", function(){
         if( slide.classList.contains("active")) {
             // se ce l'ha, rimuovo active
             slide.classList.remove("active");
+            containers[i].classList.remove("active");
     
             immagineAttiva = i;
             console.log("Active rimosso",i)
@@ -71,6 +75,7 @@ document.getElementById("btnPrev").addEventListener("click", function(){
     }
     
     slides[prossimaSlide].classList.add("active");
+    containers[immagineAttiva].classList.add("active");
     
     console.log("L'immagine attiva era: ", immagineAttiva);
     
